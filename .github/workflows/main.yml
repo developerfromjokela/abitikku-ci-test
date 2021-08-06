@@ -45,9 +45,9 @@ jobs:
           
       - name: Setup abitikku environment, test and build
         run: |
+          git init
           git clone --recursive https://github.com/Testausserveri/abitikku.git abitikku_master
           cd abitikku_master
-          
           git config --global url."https://github.com/".insteadOf git@github.com:
           git config --global url."https://".insteadOf git://
           

@@ -43,6 +43,9 @@ jobs:
           architecture: x64
           python-version: 2.7
           
+      - name: Setup bash
+        uses: pkg-src/github-action-git-bash@v1.1
+          
       - name: Setup abitikku environment, test and build
         run: |
           git init

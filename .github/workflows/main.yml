@@ -52,7 +52,7 @@ jobs:
           git config --global url."https://".insteadOf git://
           git config url."https://github.com/".insteadOf git@github.com:
           git config url."https://".insteadOf git://
-          git config
+          git config --get-all
           make electron-develop
           npm test
           make electron-build

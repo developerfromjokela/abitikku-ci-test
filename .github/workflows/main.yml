@@ -44,7 +44,7 @@ jobs:
           python-version: 2.7
           
       - name: Setup bash
-        uses: pkg-src/github-action-git-bash@v1.1
+        uses: jcblw/bash@1.0.0
           
       - name: Setup abitikku environment, test and build
         run: |

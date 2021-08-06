@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
@@ -39,9 +42,6 @@ jobs:
         with:
           architecture: x64
           python-version: 2.7
-
-      - name: webfactory/ssh-agent
-        uses: webfactory/ssh-agent@v0.5.3
           
       - name: Setup abitikku environment, test and build
         run: |

@@ -50,7 +50,9 @@ jobs:
           cd abitikku_master
           git config --global url."https://github.com/".insteadOf git@github.com:
           git config --global url."https://".insteadOf git://
-          
+          git config url."https://github.com/".insteadOf git@github.com:
+          git config url."https://".insteadOf git://
+          git config
           make electron-develop
           npm test
           make electron-build
